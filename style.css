@@ -1,0 +1,163 @@
+* {
+    transition: all .3s linear;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    perspective-origin: center;
+}
+
+.container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spin 9s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotateY(0);}
+    to { transform: rotateY(1turn);}
+}
+
+@keyframes spin2 {
+    0% { transform: rotateX(0) rotateY(0) rotateZ(0) }  /* trước */
+    16.67% { transform: rotateX(-0.25turn) rotateY(0) rotateZ(0) }  /* trên 1*/
+    33.33% { transform: rotateX(0) rotateY(-0.25turn) rotateZ(0) }  /* phải 2*/
+    50% { transform: rotateX(0) rotateY(-0.5turn) rotateZ(0) }  /* sau 1*/
+    66.67% { transform: rotateX(0.25turn) rotateY(0) rotateZ(0) }  /* dưới 3*/
+    83.33% { transform: rotateX(0) rotateY(0.25turn) rotateZ(0) }  /* trái 2*/
+    100% { transform: rotateX(0) rotateY(0) rotateZ(0) }  /* trước 1*/
+}
+
+.gon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    opacity: .1;
+    cursor: pointer;
+}
+
+/* CUBE */
+.cube .one {
+    background-image: url('image/1.jpg');
+    transform: scale3d(1.3, 1.3, 1.3) rotateX(90deg) translateZ(100px);
+}
+
+.cube .two {
+    background-image: url('image/2.jpg');
+    transform: scale3d(1.3, 1.3, 1.3) translateZ(100px);
+}
+
+.cube .three {
+    background-image: url('image/3.jpg');
+    transform: scale3d(1.3, 1.3, 1.3) rotateY(90deg) translateZ(100px);
+}
+
+.cube .four {
+    background-image: url('image/4.jpg');
+    transform: scale3d(1.3, 1.3, 1.3) rotateY(180deg) translateZ(100px);
+}
+
+.cube .five {
+    background-image: url('image/5.jpg');
+    transform: scale3d(1.3, 1.3, 1.3) rotateY(270deg) translateZ(100px);
+}
+
+.cube .six {
+    background-image: url('image/6.jpg');
+    transform: scale3d(1.3, 1.3, 1.3) rotateX(270deg) translateZ(100px);
+}
+
+.cube .seven {
+    background-image: url('image/7.jpg');
+    transform: scale3d(0.7, 0.7, 0.7) rotateX(90deg) translateZ(100px);
+}
+
+.cube .eight {
+    background-image: url('image/8.jpg');
+    transform: scale3d(0.7, 0.7, 0.7) translateZ(100px);
+}
+
+.cube .nine {
+    background-image: url('image/9.jpg');
+    transform: scale3d(0.7, 0.7, 0.7) rotateY(90deg) translateZ(100px);
+}
+
+.cube .ten {
+    background-image: url('image/10.jpg');
+    transform: scale3d(0.7, 0.7, 0.7) rotateY(180deg) translateZ(100px);
+}
+
+.cube .eleven {
+    background-image: url('image/11.jpg');
+    transform: scale3d(0.7, 0.7, 0.7) rotateY(270deg) translateZ(100px);
+}
+
+.cube .twelve {
+    background-image: url('image/12.jpg');
+    transform: scale3d(0.7, 0.7, 0.7) rotateX(270deg) translateZ(100px);
+}
+
+.cube .seven,
+.cube .eight,
+.cube .nine,
+.cube .ten,
+.cube .eleven,
+.cube .twelve {
+    opacity: 8;
+}
+
+.cube:hover .one {
+    transform: scale3d(1.3, 1.3, 1.3) rotateX(90deg) translateZ(130px);
+}
+
+.cube:hover .two {
+    transform: scale3d(1.3, 1.3, 1.3) translateZ(130px);
+}
+
+.cube:hover .three {
+    transform: scale3d(1.3, 1.3, 1.3) rotateY(90deg) translateZ(130px);
+}
+
+.cube:hover .four {
+    transform: scale3d(1.3, 1.3, 1.3) rotateY(180deg) translateZ(130px);
+}
+
+.cube:hover .five {
+    transform: scale3d(1.3, 1.3, 1.3) rotateY(270deg) translateZ(130px);
+}
+
+.cube:hover .six {
+    transform: scale3d(1.3, 1.3, 1.3) rotateX(270deg) translateZ(130px);
+}
+
+.cube:hover .one,
+.cube:hover .two,
+.cube:hover .three,
+.cube:hover .four,
+.cube:hover .five,
+.cube:hover .six {
+    opacity: .9;
+}
+
+.cube:hover .seven,
+.cube:hover .eight,
+.cube:hover .nine,
+.cube:hover .ten,
+.cube:hover .eleven,
+.cube:hover .twelve {
+    opacity: .1;
+}
